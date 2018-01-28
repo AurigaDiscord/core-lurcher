@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+  lurcher:
+    build: .
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - GATEWAY_HOST=gateway.discord.gg
+      - SHARDS_TOTAL=1
+      - SHARD_TO_USE=0
+      - LARGE_THRESHOLD=150
+      - PLAYING_STATUS=docker-compose
+      - AMQP_PATH=amqp://auriga:auriga@auriga-devbox:5672
+      - AMQP_EXCHANGE=topic
+      - AMQP_QUEUE_PRODUCING=raw
+      - AMQP_KEY_PRODUCING=raw
+    extra_hosts:
+      - "auriga-devbox:10.200.5.5"
