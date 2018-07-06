@@ -24,9 +24,9 @@ defmodule Lurcher.Mixfile do
   defp deps do
     [
       {:confex, "~> 3.3.0"},
-      {:websockex, "~> 0.4.0"},
+      {:websockex, "~> 0.4.1"},
       {:poison, "~> 3.1"},
-      {:amqp, "~> 1.0.0-pre.3"}
+      {:amqp, "~> 1.0.3"}
     ]
   end
 end
